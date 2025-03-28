@@ -61,3 +61,6 @@ app.get("/listSchools", (req, res) => {
 
 // Start Server
 app.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`));
+if(!db){
+  console.log("db not connected");
+}
