@@ -1,4 +1,4 @@
-const mysql = require("mysql");
+const mysql = require("mysql2"); // Use mysql2 instead of mysql
 const dotenv = require("dotenv");
 
 dotenv.config();
@@ -9,6 +9,9 @@ const db = mysql.createConnection({
   user: process.env.DB_USER,
   password: process.env.DB_PASS,
   database: process.env.DB_NAME,
+  authPlugins: {
+    mysql_clear_password: () => () => process.env.DB_PASS, // Use clear text password authentication
+  },
 });
 
 // Connect to MySQL
