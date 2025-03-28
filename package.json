@@ -1,0 +1,30 @@
+{
+  "name": "school-management",
+  "version": "1.0.0",
+  "description": "intership assignment full stack developer",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/raj20889/SCHOOL-MANAGEMENT.git"
+  },
+  "author": "Mohit Raj",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/raj20889/SCHOOL-MANAGEMENT/issues"
+  },
+  "homepage": "https://github.com/raj20889/SCHOOL-MANAGEMENT#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "haversine-distance": "^1.2.3",
+    "mysql": "^2.18.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  }
+}
