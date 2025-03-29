@@ -12,6 +12,29 @@ app.use(cors());
 app.use(express.json()); // Enable JSON body parsing
 
 
+
+// Create a connection to the database
+const db = mysql.createConnection({
+  host: process.env.DB_HOST,
+  user: process.env.DB_USER,
+  password: process.env.DB_PASSWORD,
+  database: process.env.DB_NAME,
+  port: process.env.DB_PORT
+});
+
+// Test database connection
+app.get('/test-db', (req, res) => {
+  db.connect((err) => {
+      if (err) {
+          res.status(500).send('Database connection failed: ' + err.message);
+      } else {
+          res.send('Database connected successfully!');
+      }
+  });
+});
+
+
+
 // Root route
 app.get('/', (req, res) => {
   res.send('Welcome to the School Management API!');
