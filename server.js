@@ -1,6 +1,8 @@
 const express = require('express');
 const cors = require('cors');
 require('dotenv').config(); // Load environment variables
+const mysql = require('mysql2');
+
 
 const schoolRoutes = require('./routes/schoolRoutes'); // Import school routes
 
