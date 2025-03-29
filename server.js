@@ -1,8 +1,7 @@
 const express = require('express');
 const cors = require('cors');
+const mysql = require('mysql2'); // Added mysql2 import
 require('dotenv').config(); // Load environment variables
-const mysql = require('mysql2');
-
 
 const schoolRoutes = require('./routes/schoolRoutes'); // Import school routes
 
@@ -12,8 +11,6 @@ const PORT = process.env.PORT || 5000;
 // Middleware
 app.use(cors());
 app.use(express.json()); // Enable JSON body parsing
-
-
 
 // Create a connection to the database
 const db = mysql.createConnection({
@@ -34,8 +31,6 @@ app.get('/test-db', (req, res) => {
       }
   });
 });
-
-
 
 // Root route
 app.get('/', (req, res) => {
