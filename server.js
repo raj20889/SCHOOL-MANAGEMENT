@@ -11,6 +11,12 @@ const PORT = process.env.PORT || 5000;
 app.use(cors());
 app.use(express.json()); // Enable JSON body parsing
 
+
+// Root route
+app.get('/', (req, res) => {
+  res.send('Welcome to the School Management API!');
+});
+
 // Routes
 app.use('/api/schools', schoolRoutes);
 
