@@ -1,2 +1,0 @@
-# SCHOOL-MANAGEMENT
-Internship Assignment
